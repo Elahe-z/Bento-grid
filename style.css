@@ -54,7 +54,7 @@ img {
 }
 
 .container-grid {
-    display: grid;
+
     margin: 2rem auto;
     max-width: 100%;
     align-items: center;
@@ -70,7 +70,11 @@ img {
         "eight"
     ;
 
+    >main{
+        display: grid;
+    }
     } 
+
 @media screen and (min-width: 643px)  { 
     .container-grid {
         grid-template-areas:
