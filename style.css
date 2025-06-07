@@ -1,0 +1,261 @@
+@font-face {
+    font-family: 'DM Sans';
+    font-weight: 400 500;
+    src: url('./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf');
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    font-weight: 400 500;
+    font-style: italic;
+    src: url('./assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf');
+}
+
+h1,
+h2 {
+    font-weight: 500;
+}
+
+:root {
+    --purple: hsl(256, 67%, 59%);
+    --ligth-purple: hsl(254, 88%, 90%);
+    --white: hsl(0, 0%, 100%);
+    --yellow: hsl(39, 100%, 71%);
+    --light-yellow: hsl(31, 66%, 93%);
+    --black: hsl(0, 0%, 7%);
+    --background-color: hsl(0, 0%, 95%);
+
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: inherit;
+    font-size: 100%;
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.1;
+}
+
+body {
+    padding: 30px;
+    color: var(--black);
+    background-color: var(--background-color);
+    margin: 0;
+
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.container-grid {
+    display: grid;
+    margin: 2rem auto;
+    max-width: 100%;
+    align-items: center;
+    gap: 2rem;
+    grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "four"
+        "five"
+        "six"
+        "seven"
+        "eight"
+    ;
+
+    } 
+@media screen and (min-width: 643px)  { 
+    .container-grid {
+        grid-template-areas:
+            "one one"
+            "two three"
+            "four six"
+            "four seven"
+            "five eight";
+    }
+}
+@media screen and (min-width: 960px){
+    .container-grid {
+        grid-template-areas:
+            "seven one one four"
+            "seven two three four"
+            "eight two three four"
+            "eight six five five";
+    
+}
+}
+
+
+
+.container-grid div {
+    border-radius: 15px;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+.card-1 {
+    color: var(--white);
+    grid-area: one;
+    padding: 2.5rem;
+    font-size: 2rem;
+    place-items: center;
+    padding-top: 0.5rem;
+    text-align: center;
+    background-color: var(--purple);
+
+    h1 span:nth-of-type(1) {
+        color: var(--yellow);
+    }
+
+    h1 span:nth-of-type(2) {
+        font-style: italic;
+    }
+
+    img {
+        width: 70%;
+        display: block;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+    
+
+}
+
+.card-2 {
+    padding: 1.4rem 0.1rem 0.1rem 1.8rem;
+    background-color: var(--white);
+    font-size: 1.25rem;
+
+    >img {
+        filter: drop-shadow(0 0 1rem hsl(0 0% 0% / .125));
+        grid-area: two;
+        border-radius: 100vw;
+        max-width: 90%;
+    }
+    grid-area: two;
+}
+
+.card-3 {
+    background-color: var(--yellow);
+    grid-area: three;
+    padding: 0.135rem 2.5rem 0 1.25rem;
+
+    >img {
+        max-width: 70%;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+    
+
+}
+
+.card-4 {
+    background-color: var(--ligth-purple);
+    grid-area: four;
+    text-align: center;
+    padding: 1rem 0.1rem 1rem 2rem;
+
+    >h2 {
+        font-weight: 550;
+        font-size: 2rem;
+        padding-right: 2rem;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: x-large;
+        padding: 1rem 2rem 0rem 1rem;
+    }
+
+    img {
+        padding-right: 2rem;
+    }
+    
+}
+
+.card-5 {
+    background-color: var(--purple);
+    grid-area: five;
+    color: var(--white);
+    place-items: center;
+    text-align: center;
+    padding: 1rem 1.5rem 1rem 1rem;
+
+    img {
+        max-width: 50%;
+    }
+
+    h2 {
+        padding: 1rem 5rem 0rem 5rem;
+        font-size: 1rem;
+        font-weight: 580;
+    }
+    
+}
+
+.card-6 {
+    background-color: var(--white);
+    grid-area: six;
+    padding: 1rem 3rem 1rem 1rem;
+
+    h2 {
+        font-weight: 300;
+        font-size: 1.25rem;
+    }
+
+    span {
+        font-weight: 500;
+        font-size: 3rem;
+    }
+
+    img {
+        max-width: 40%;
+    }
+    
+}
+
+.card-7 {
+    background-color: var(--light-yellow);
+    grid-area: seven;
+    padding: 1rem 1rem 1rem 2.5rem;
+
+    img {
+        max-width: 50%;
+    }
+
+    h2 {
+        font-size: xx-large;
+    }
+
+    span {
+        font-style: italic;
+        color: var(--purple);
+    }
+    
+}
+
+.card-8 {
+    background-color: var(--yellow);
+    grid-area: eight;
+    padding: 0.1rem 1rem 1rem 1.5rem;
+
+    img {
+        max-width: 58%;
+    }
+
+    h2 {
+        font-size: xx-large;
+        padding-right: 6rem;
+    }
+}
